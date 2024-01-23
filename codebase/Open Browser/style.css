@@ -1,0 +1,48 @@
+#container{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    background-color: rgb(192, 126, 28);
+}
+
+#formContainer form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+    margin-top: 50px;
+    margin-left: 80px;
+    padding: 20px;
+    border:1px solid rgb(238, 232, 232);
+    background-color: antiquewhite;
+}
+
+#formContainer form div{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+#formContainer form div label{
+    font-weight: bold;
+}
+
+#formContainer form div input{
+    width: 100px;
+    height: 20px;
+    padding-right: 15px;
+}
+#formContainer form #totalPercentage{
+    position: relative;
+}
+#formContainer form div #percentage{
+    position: absolute;
+    top:4px;
+    right:42px ;
+}
+
+#formContainer form div button{
+   padding: 5px;
+   align-self: flex-end;
+}

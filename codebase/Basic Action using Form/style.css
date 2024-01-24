@@ -3,7 +3,7 @@
     height: auto;
     margin: auto;
     padding: 10px;
-    background-color: rgb(192, 126, 28);
+    background-color: whitesmoke;
 }
 
 #formContainer form{
@@ -15,7 +15,7 @@
     margin-left: 80px;
     padding: 20px;
     border:1px solid rgb(238, 232, 232);
-    background-color: antiquewhite;
+    background-color: rosybrown;
 }
 
 #formContainer form div{
@@ -45,4 +45,11 @@
 #formContainer form div button{
    padding: 5px;
    align-self: flex-end;
+   cursor: pointer;
 }
+
+#infoDetails {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e0e0e0;
+  }

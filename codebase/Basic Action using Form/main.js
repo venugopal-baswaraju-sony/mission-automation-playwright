@@ -4,6 +4,11 @@
     $( "#submitBtn" ).on( "click", function() {
       calValueByPercent();
       } );
+
+      $("#myCheckbox").click(function(){
+        // Toggle the visibility of the hidden element
+        $("#infoDetails").toggle();
+      });
   });
 
   function calValueByPercent(){
@@ -13,7 +18,7 @@
     if(userEnteredPercentageValue && userEnteredTotalValue){
       calculatedValue = (parseInt(userEnteredPercentageValue) / 100) * parseInt(userEnteredTotalValue);
     }
-    $("#result").html(`<label>Result:</label>&nbsp;&nbsp;&nbsp;The ${userEnteredPercentageValue}% of ${userEnteredTotalValue} is ${calculatedValue}.`)
+    $("#result").html(`<label>Result:</label>&nbsp;&nbsp;&nbsp;The &nbsp;<b>${userEnteredPercentageValue}%</b>&nbsp;of &nbsp;<b>${userEnteredTotalValue}</b>&nbsp;is &nbsp;<b>${calculatedValue}</b>.`)
   }
 
 

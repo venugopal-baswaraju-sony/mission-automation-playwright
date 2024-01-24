@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Testing Playwrightt</title>
-    <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Percentage Calculator</title>
+    <meta name="viewport" content="width=\, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="./main.js"></script>
@@ -35,6 +34,11 @@
                     </div>
                 </form>
                 <div>
+                    <label>
+                        <input type="checkbox" id="myCheckbox"> Show Addition Information.
+                      </label>
+                </div>
+                <div id="infoDetails">
                     <h2>For your References</h2>
                     <div>
                         <h3>What is a percentage?</h3>
@@ -52,10 +56,10 @@
                     </div>
                     <div>
                         <h3>How do you calculate a percentage?</h3>
-                        <p>Percentages are used in a wide variety of contexts, from calculating discounts and taxes to
-                            measuring changes in stock prices and economic indicators. Understanding how percentages
-                            work can help you make more informed decisions in a variety of areas, from personal finance
-                            to business management.</p>
+                        <p>Percentage is a way of expressing a number as a fraction of 100. It is commonly used to
+                            represent a portion of a whole or to compare two numbers. Percentages are often denoted with
+                            the symbol "%". For example, if there are 100 cars in a garage and 25 of them are white, we
+                            could say that 25% of the cars in the garage are white.</p>
                     </div>
                 </div>
             </div>
@@ -64,3 +68,14 @@
 </body>
 
 </html>
+
+<!-- 
+Error: expect.toContainText: Error: strict mode violation: locator('#infoDetails h3') resolved to 3 elements:
+    1) <h3>What is a percentage?</h3> aka getByRole('heading', { name: 'What is a percentage?' })
+    2) <h3>How do you calculate a percentage?</h3> aka locator('#infoDetails div').filter({ hasText: 'How do you calculate a percentage? Percentage is a way of expressing a number' }).getByRole('heading')
+    3) <h3>How do you calculate a percentage?</h3> aka locator('#infoDetails div').filter({ hasText: 'How do you calculate a percentage? Percentages are used in a wide variety of' }).getByRole('heading') -->
+
+<!-- Error: expect.toContainText: Error: strict mode violation: locator('#infoDetails h3') resolved to 3 elements:
+    1) <h3>What is a percentage?</h3> aka getByRole('heading', { name: 'What is a percentage?' })
+    2) <h3>How do you calculate a percentage?</h3> aka getByRole('heading', { name: 'How do you calculate a' }).first()
+    3) <h3>How do you calculate a percentage?</h3> aka getByRole('heading', { name: 'How do you calculate a' }).nth(1) -->
